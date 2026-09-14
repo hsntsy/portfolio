@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-labelledby="title desc">
+  <title id="title">ERP project</title>
+  <desc id="desc">Illustration representing ERP implementation support and process work.</desc>
+  <rect width="600" height="360" fill="#f2f7ff"/>
+  <rect x="86" y="80" width="428" height="204" rx="22" fill="#ffffff"/>
+  <rect x="118" y="110" width="120" height="150" rx="12" fill="#dbeafe"/>
+  <rect x="258" y="110" width="120" height="150" rx="12" fill="#bfdbfe"/>
+  <rect x="398" y="110" width="80" height="150" rx="12" fill="#93c5fd"/>
+  <path d="M144 140h68M144 170h68M144 200h68M284 140h68M284 170h68M284 200h68M418 140h30M418 170h30M418 200h30" stroke="#1d4ed8" stroke-width="8" stroke-linecap="round"/>
+  <rect x="118" y="276" width="360" height="12" rx="6" fill="#dbeafe"/>
+</svg>
