@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Professional Portfolio Website | Hasan Demirci Atasoy</title>
+  <meta name="description" content="Case study of a responsive personal CV and portfolio website built with semantic HTML, modern CSS, GitHub Pages, a custom domain, and HTTPS.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Hasan Demirci Atasoy</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">About Me</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container">
+      <section class="content-panel">
+        <p class="eyebrow">Frontend & Web Case Study</p>
+        <h1>Professional Portfolio Website</h1>
+        <p>A responsive personal CV and portfolio website created to present professional experience, technical skills, certifications, and project case studies through a clear and accessible interface.</p>
+
+        <ul class="check-list meta-list">
+          <li><strong>Project type:</strong> Personal portfolio and academic web project</li>
+          <li><strong>Current version:</strong> Semantic HTML5 and external CSS</li>
+          <li><strong>Deployment:</strong> GitHub Pages</li>
+          <li><strong>Status:</strong> Live and actively maintained</li>
+        </ul>
+
+        <p><a class="project-link" href="portfolio.html#project-professional-portfolio">Back to Portfolio</a></p>
+      </section>
+
+      <section class="content-panel">
+        <h2>Project Overview</h2>
+        <p>The project began as a personal CV and portfolio assignment and was developed into a professional website for presenting work experience, certifications, technical competencies, and detailed project case studies. The current version focuses on a lightweight static architecture, responsive design, accessibility, maintainability, and reliable deployment.</p>
+      </section>
+
+      <section class="content-panel">
+        <h2>Objectives</h2>
+        <ul class="check-list">
+          <li>Create a professional personal website suitable for recruiters and hiring managers</li>
+          <li>Present About Me, CV, and Portfolio content through separate semantic pages</li>
+          <li>Provide at least five project entries with clear descriptions and technologies</li>
+          <li>Build a responsive layout for mobile, tablet, and desktop screens</li>
+          <li>Use Flexbox, CSS Grid, and media queries appropriately</li>
+          <li>Keep the initial implementation free from JavaScript and external frameworks</li>
+          <li>Create a maintainable structure that can support future functionality</li>
+        </ul>
+      </section>
+
+      <section class="content-panel">
+        <h2>Information Architecture</h2>
+        <p>The website is organized into separate pages with shared navigation: an About Me page for professional positioning and skills, a CV page for experience and qualifications, a Portfolio page for project summaries, and dedicated case study pages for detailed project documentation. The site uses a shared external stylesheet and consistent semantic structure.</p>
+      </section>
+
+      <section class="content-panel">
+        <h2>Frontend Implementation</h2>
+        <p>Semantic HTML5 elements structure the site, with one shared external CSS file. The design follows a mobile-first approach using Flexbox for navigation and alignment and CSS Grid for project cards and content groups. Media queries support 375px, 768px, and 1024px breakpoints. File names and CSS classes use lowercase, hyphenated conventions, and images are stored locally under the assets directory.</p>
+      </section>
+
+      <section class="content-panel">
+        <h2>Accessibility</h2>
+        <ul class="check-list">
+          <li>Skip-to-content links</li>
+          <li>Visible keyboard focus styles</li>
+          <li>Descriptive image alternative text</li>
+          <li>Sensible heading hierarchy</li>
+          <li>aria-current for active navigation</li>
+          <li>Links with clear and descriptive text</li>
+          <li>Responsive layouts that avoid horizontal scrolling</li>
+        </ul>
+      </section>
+
+      <section class="content-panel">
+        <h2>Deployment and Domain Configuration</h2>
+        <p>The source code is managed with Git and GitHub. Development changes are made in feature branches and integrated through pull requests. The website is deployed from the main branch using GitHub Pages, with a custom domain connected through DNS and HTTPS enabled for encrypted delivery.</p>
+
+        <div class="architecture-flow">
+          <p>Local development in IntelliJ IDEA</p>
+          <p>&rarr; Git feature branch</p>
+          <p>&rarr; GitHub pull request</p>
+          <p>&rarr; Main branch</p>
+          <p>&rarr; GitHub Pages</p>
+          <p>&rarr; Custom domain with HTTPS</p>
+        </div>
+      </section>
+
+      <section class="content-panel">
+        <h2>Technology Stack</h2>
+        <div class="skill-group tech-stack">
+          <div>
+            <h4>Core Web</h4>
+            <ul class="tag-list">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>Semantic HTML</li>
+              <li>Responsive Web Design</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>Layout</h4>
+            <ul class="tag-list">
+              <li>Flexbox</li>
+              <li>CSS Grid</li>
+              <li>Media Queries</li>
+              <li>Mobile-First Design</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>Development and Version Control</h4>
+            <ul class="tag-list">
+              <li>IntelliJ IDEA</li>
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>Feature Branches</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>Deployment</h4>
+            <ul class="tag-list">
+              <li>GitHub Pages</li>
+              <li>Custom Domain</li>
+              <li>DNS</li>
+              <li>HTTPS</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-panel">
+        <h2>Engineering Decisions</h2>
+        <p>Static HTML and CSS were chosen for the first version to meet the assignment constraints and keep the site lightweight. A shared stylesheet and reusable classes support consistency and maintainability. Separate project detail pages prevent the main Portfolio page from becoming overcrowded. Feature branches and pull requests provide controlled integration into the main branch. GitHub Pages provides an appropriate deployment platform for the current static architecture. The project structure allows JavaScript or a frontend framework to be introduced in a future version without changing the public domain.</p>
+      </section>
+
+      <section class="content-panel">
+        <h2>Current Status and Future Development</h2>
+        <p>The current version is live and actively maintained. Future development may include JavaScript-based interaction, project filtering, improved content management, automated testing, performance optimization, and a future migration to a component-based frontend architecture if the project requirements justify it.</p>
+
+        <p><a class="project-link" href="https://github.com/hsntsy/portfolio" target="_blank" rel="noopener noreferrer">View Source Code</a></p>
+        <p><a class="project-link" href="https://hasanatasoy.dev" target="_blank" rel="noopener noreferrer">Visit Live Website</a></p>
+        <p><a class="project-link" href="portfolio.html#project-professional-portfolio">Back to Portfolio</a></p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Hasan Demirci Atasoy</p>
+      <p>Data Analytics • Business Intelligence • Cloud Technologies</p>
+    </div>
+  </footer>
+</body>
+</html>
