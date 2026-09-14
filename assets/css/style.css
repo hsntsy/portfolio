@@ -533,4 +533,9 @@ h3 {
     color: var(--color-muted);
 }
 
+#project-professional-portfolio > img {
+    object-fit: contain;
+    background-color: #f4f7fb;
+}
+
 
