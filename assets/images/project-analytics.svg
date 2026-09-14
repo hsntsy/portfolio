@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" role="img" aria-labelledby="title desc">
+  <title id="title">Data analytics project</title>
+  <desc id="desc">Illustration representing a data analytics dashboard.</desc>
+  <rect width="600" height="360" fill="#eef6ff"/>
+  <rect x="58" y="60" width="484" height="240" rx="18" fill="#ffffff"/>
+  <rect x="82" y="92" width="145" height="20" rx="10" fill="#dbeafe"/>
+  <rect x="82" y="128" width="210" height="12" rx="6" fill="#bfdbfe"/>
+  <rect x="82" y="152" width="170" height="12" rx="6" fill="#bfdbfe"/>
+  <rect x="82" y="194" width="92" height="82" rx="12" fill="#93c5fd"/>
+  <rect x="190" y="224" width="92" height="52" rx="12" fill="#60a5fa"/>
+  <rect x="298" y="202" width="92" height="74" rx="12" fill="#3b82f6"/>
+  <rect x="406" y="170" width="92" height="106" rx="12" fill="#1d4ed8"/>
+  <path d="M80 307h440" stroke="#dbeafe" stroke-width="4" stroke-linecap="round"/>
+</svg>
