@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AWS Three-Tier Web Application Infrastructure | Hasan Demirci Atasoy</title>
+    <meta name="description" content="Case study of a multi-AZ AWS infrastructure deployment for a Django application using Amazon EC2, Application Load Balancer, Auto Scaling, Amazon RDS, Amazon S3, CloudFront, and Route 53.">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html">Hasan Demirci Atasoy</a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">About Me</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <div class="container">
+            <section class="content-panel">
+                <p class="eyebrow">Cloud Infrastructure Case Study</p>
+                <h1>AWS Three-Tier Web Application Infrastructure</h1>
+                <p>An AWS infrastructure implementation for deploying a supplied Django blog application across a multi-AZ network architecture with load balancing, automatic scaling, managed database services, secure content delivery, and failover routing.</p>
+
+                <ul class="check-list meta-list">
+                    <li><strong>Project type:</strong> AWS cloud infrastructure course project</li>
+                    <li><strong>Primary role:</strong> Infrastructure design, configuration, deployment, and integration</li>
+                    <li><strong>Application code:</strong> Supplied Django application</li>
+                    <li><strong>Deployment status:</strong> AWS resources decommissioned</li>
+                </ul>
+
+                <p><a class="project-link" href="portfolio.html#project-aws-three-tier">Back to Portfolio</a></p>
+            </section>
+
+            <section class="content-panel">
+                <h2>Project Overview</h2>
+                <p>The project focused on deploying a supplied Django blog application into an isolated AWS VPC. The infrastructure separated public-facing traffic, application servers, and the database layer while supporting media storage, automatic scaling, HTTPS delivery, and a static failover page.</p>
+            </section>
+
+            <section class="content-panel">
+                <h2>Project Context and My Role</h2>
+                <p>The Django application and initial project requirements were supplied as part of a Clarusway course project. The work focused on creating and configuring the AWS environment, connecting the application to Amazon RDS and Amazon S3, preparing EC2 launch automation, and integrating networking, security, scaling, content delivery, and failover components.</p>
+            </section>
+
+            <section class="content-panel">
+                <h2>Architecture</h2>
+                <p>Primary request flow and media/event flows used a combination of load balancing, managed services, and event-driven functions to process uploads and serve content securely.</p>
+
+                <figure>
+                    <img class="project-architecture-image" src="assets/images/project-aws-three-tier.jpg" alt="Architecture diagram of the AWS three-tier Django application deployment" loading="lazy" decoding="async">
+                    <figcaption>Multi-AZ AWS architecture with CloudFront, Route 53, load balancing, EC2 application instances, Amazon RDS, Amazon S3, AWS Lambda, and DynamoDB.</figcaption>
+                </figure>
+
+                <div class="architecture-flow">
+                    <p>Route 53</p>
+                    <p>&rarr; Amazon CloudFront</p>
+                    <p>&rarr; Application Load Balancer</p>
+                    <p>&rarr; Auto Scaling Group</p>
+                    <p>&rarr; Amazon EC2 instances running Django</p>
+                    <p>&rarr; Amazon RDS for MySQL</p>
+
+                    <p class="architecture-step">Django application</p>
+                    <p class="architecture-step">&rarr; Amazon S3</p>
+                    <p class="architecture-step">&rarr; S3 event notification</p>
+                    <p class="architecture-step">&rarr; AWS Lambda</p>
+                    <p class="architecture-step">&rarr; Amazon DynamoDB</p>
+
+                    <p class="architecture-step">Route 53 health check</p>
+                    <p class="architecture-step">&rarr; Primary: CloudFront and the application environment</p>
+                    <p class="architecture-step">&rarr; Secondary: Amazon S3 static maintenance page</p>
+                </div>
+            </section>
+
+            <section class="content-panel">
+                <h2>Network Design</h2>
+                <p>The infrastructure used a dedicated VPC across two Availability Zones. Each AZ contained one public and one private subnet. Public subnets hosted internet-facing components; private subnets hosted application and database resources. An Internet Gateway and route tables provided external connectivity, with NAT-based outbound access for private resources. Security group rules allowed traffic from the load balancer to application instances and from instances to the database.</p>
+            </section>
+
+            <section class="content-panel">
+                <h2>Application and Data Layers</h2>
+                <ul class="check-list">
+                    <li>Django application deployed to Amazon EC2</li>
+                    <li>Launch Template used to automate instance preparation</li>
+                    <li>Auto Scaling Group distributed across Availability Zones</li>
+                    <li>Application Load Balancer used for traffic distribution and health checks</li>
+                    <li>Amazon RDS for MySQL used for relational application data</li>
+                    <li>Amazon S3 used for uploaded media</li>
+                    <li>Amazon DynamoDB used to record S3 object information</li>
+                    <li>AWS Lambda triggered by S3 events</li>
+                </ul>
+            </section>
+
+            <section class="content-panel">
+                <h2>Availability and Traffic Management</h2>
+                <p>Application Load Balancer was used for traffic distribution and health checking. Auto Scaling Group maintained application capacity across AZs. Amazon CloudFront provided content delivery; AWS Certificate Manager managed TLS certificates and HTTP-to-HTTPS redirection. Route 53 health checks and failover routing used a static S3 maintenance page as the secondary target.</p>
+            </section>
+
+            <section class="content-panel">
+                <h2>Technology Stack</h2>
+                <div class="skill-group tech-stack">
+                    <div>
+                        <h4>Networking</h4>
+                        <ul class="tag-list">
+                            <li>Amazon VPC</li>
+                            <li>Public and private subnets</li>
+                            <li>Route tables</li>
+                            <li>Internet Gateway</li>
+                            <li>NAT connectivity</li>
+                            <li>Security Groups</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4>Compute and Scaling</h4>
+                        <ul class="tag-list">
+                            <li>Amazon EC2</li>
+                            <li>Launch Templates</li>
+                            <li>Auto Scaling Group</li>
+                            <li>Application Load Balancer</li>
+                            <li>Bash user data</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4>Data and Storage</h4>
+                        <ul class="tag-list">
+                            <li>Amazon RDS for MySQL</li>
+                            <li>Amazon S3</li>
+                            <li>Amazon DynamoDB</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4>Delivery and DNS</h4>
+                        <ul class="tag-list">
+                            <li>Amazon CloudFront</li>
+                            <li>Amazon Route 53</li>
+                            <li>AWS Certificate Manager</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4>Application and Integration</h4>
+                        <ul class="tag-list">
+                            <li>Django</li>
+                            <li>Python</li>
+                            <li>AWS Lambda</li>
+                            <li>S3 event notifications</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-panel">
+                <h2>Architecture Decisions and Modernization Notes</h2>
+                <p>Multi-AZ subnet design separated public, application, and database concerns. Load balancing and Auto Scaling supported replaceable application instances. Amazon RDS provided a managed relational database layer, and Amazon S3 separated uploaded media from application instances. CloudFront and Route 53 provided content delivery and DNS routing. The implementation followed the course requirements available at the time. For a current redesign, administrative access and IAM permissions would be further restricted through least-privilege policies and managed access mechanisms. A current redesign would also evaluate managed NAT Gateway or other modern outbound-access patterns depending on cost and architecture requirements.</p>
+            </section>
+
+            <section class="content-panel">
+                <h2>Project Status</h2>
+                <p>The original AWS resources, domain configuration, and live environment have been decommissioned. The project is retained as an AWS infrastructure implementation and architecture case study.</p>
+
+                <p><a class="project-link" href="portfolio.html#project-aws-three-tier">Back to Portfolio</a></p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Hasan Demirci Atasoy</p>
+            <p>Data Analytics • Business Intelligence • Cloud Technologies</p>
+        </div>
+    </footer>
+</body>
+</html>

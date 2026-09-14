@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Document Intelligence Platform | Hasan Demirci Atasoy</title>
+    <meta name="description" content="Case study of an AWS-based serverless document intelligence platform using React, Python, Amazon Textract, Amazon Comprehend, Amazon Bedrock, and AWS CDK.">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html">Hasan Demirci Atasoy</a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">About Me</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <div class="container">
+            <section class="content-panel">
+                <p class="eyebrow">Cloud & AI Case Study</p>
+                <h1>AI Document Intelligence Platform</h1>
+                <p>A serverless document processing platform developed as an AWS AI course project. The solution explored text extraction, entity recognition, sentiment analysis, and AI-assisted summarization for PDF and image documents.</p>
+
+                <ul class="check-list meta-list">
+                    <li><strong>Project type:</strong> AWS AI course project</li>
+                    <li><strong>Architecture:</strong> Serverless and event-driven</li>
+                    <li><strong>Source code:</strong> Private repository</li>
+                    <li><strong>Deployment status:</strong> AWS resources decommissioned</li>
+                </ul>
+
+                <p><a class="project-link" href="portfolio.html#project-ai-document-intelligence">Back to Portfolio</a></p>
+            </section>
+
+            <section class="content-panel">
+                <h2>Project Overview</h2>
+                <p>The platform allowed users to upload PDF, PNG, and JPG documents and start an asynchronous processing workflow. Processed results included extracted text, detected entities, sentiment analysis, and AI-assisted summaries that could be reviewed and exported as JSON.</p>
+            </section>
+
+            <section class="content-panel">
+                <h2>Architecture</h2>
+                <p>The React frontend was delivered through Amazon S3 and CloudFront. Amazon Cognito provided authentication, while API Gateway and Python-based AWS Lambda functions handled application requests. AWS Step Functions coordinated processing across Amazon Textract, Amazon Comprehend, and Amazon Bedrock. Amazon S3 stored uploaded documents, and DynamoDB stored document metadata and analysis results.</p>
+
+                <div class="architecture-flow">
+                    <p>React frontend</p>
+                    <p>&rarr; CloudFront and Amazon S3</p>
+                    <p>&rarr; API Gateway and Amazon Cognito</p>
+                    <p>&rarr; AWS Lambda and Step Functions</p>
+                    <p>&rarr; Amazon Textract, Amazon Comprehend, and Amazon Bedrock</p>
+                    <p>&rarr; Amazon S3 and DynamoDB</p>
+                </div>
+            </section>
+
+            <section class="content-panel">
+                <h2>Key Capabilities</h2>
+                <ul class="check-list">
+                    <li>PDF, PNG, and JPG document upload</li>
+                    <li>OCR with Amazon Textract</li>
+                    <li>Entity recognition with Amazon Comprehend</li>
+                    <li>Sentiment analysis with Amazon Comprehend</li>
+                    <li>AI-assisted summarization with Amazon Bedrock</li>
+                    <li>Event-driven workflow orchestration</li>
+                </ul>
+            </section>
+
+            <section class="content-panel">
+                <h2>Technology Stack</h2>
+                <div class="skill-group tech-stack">
+                    <div>
+                        <h4>Frontend</h4>
+                        <ul class="tag-list">
+                            <li>React 18</li>
+                            <li>Vite</li>
+                            <li>Tailwind CSS</li>
+                            <li>AWS Amplify</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4>Backend</h4>
+                        <ul class="tag-list">
+                            <li>Python 3.11</li>
+                            <li>AWS Lambda</li>
+                            <li>API Gateway</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4>AI Services</h4>
+                        <ul class="tag-list">
+                            <li>Amazon Textract</li>
+                            <li>Amazon Comprehend</li>
+                            <li>Amazon Bedrock</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4>Data and Delivery</h4>
+                        <ul class="tag-list">
+                            <li>Amazon S3</li>
+                            <li>DynamoDB</li>
+                            <li>CloudFront</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4>Infrastructure and Security</h4>
+                        <ul class="tag-list">
+                            <li>AWS CDK</li>
+                            <li>TypeScript</li>
+                            <li>Cognito</li>
+                            <li>KMS</li>
+                            <li>IAM</li>
+                            <li>CloudWatch</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-panel">
+                <h2>Project Status</h2>
+                <p>The original AWS resources and live environment have been decommissioned. The project is presented as an implementation and architecture case study, and the source code remains private.</p>
+
+                <p><a class="project-link" href="portfolio.html#project-ai-document-intelligence">Back to project card</a></p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Hasan Demirci Atasoy</p>
+            <p>Data Analytics • Business Intelligence • Cloud Technologies</p>
+        </div>
+    </footer>
+</body>
+</html>
