@@ -496,4 +496,46 @@ h3 {
     }
 }
 
+/* Case study layout: keep minimal, reusable rules scoped to case studies */
+/* Case study layout: keep minimal, reusable rules scoped to case studies */
+.tech-stack {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+}
+
+.tech-stack h4 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1rem;
+    color: var(--color-muted);
+    font-weight: 700;
+}
+
+.tech-stack .tag-list {
+    gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .tech-stack {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .tech-stack {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* Architecture flow small styling */
+.architecture-flow p {
+    margin: 0.25rem 0;
+    color: var(--color-muted);
+}
+
+#project-professional-portfolio > img {
+    object-fit: contain;
+    background-color: #f4f7fb;
+}
+
 
